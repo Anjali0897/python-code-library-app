@@ -1,7 +1,7 @@
 ---
 services:
   db:
-    images: anjaligundavaram/docker:database-image
+    image: anjaligundavaram/docker:database-image
     deploy:
       replicas: 1
     ports:
