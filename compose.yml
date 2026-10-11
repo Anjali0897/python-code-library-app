@@ -1,7 +1,7 @@
 ---
 services:
   db:
-    image: anjaligundavaram/docker:db
+    image: anjaligundavaram/lib_app:db
     deploy:
       replicas: 1
     ports:
@@ -10,7 +10,7 @@ services:
       - mynetwork
 
   auth_service:
-    image: anjaligundavaram/docker:auth_service
+    image: anjaligundavaram/lib_app:auth_service
     deploy:
       replicas: 1
     ports:
@@ -22,7 +22,7 @@ services:
     
 
   book_service:
-    image: anjaligundavaram/docker:book_service
+    image: anjaligundavaram/lib_app:book_service
     deploy:
       replicas: 1
     ports:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
   borrow_service:
-    image: anjaligundavaram/docker:borrow_service
+    image: anjaligundavaram/lib_app:borrow_service
     deploy:
       replicas: 1
     ports:
@@ -43,7 +43,7 @@ services:
       - db
 
   frontend:
-    image: anjaligundavaram/docker:front-end
+    image: anjaligundavaram/lib_app:front-end
     deploy:
       replicas: 1
     ports:
